@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethereal</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+    }
+
+    #canvas {
+      display: block;
+      background: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+
+  <script type="module">
+    import { ethereal } from "../dist/main.js";
+    import { wave } from "../dist/effects/waves.js";
+    import { gridGlow } from "../dist/effects/grids.js";
+    import { cursorMagnet } from "../dist/effects/cursor.js";
+
+    ethereal({
+      element: "#canvas",
+      effects: [
+        wave({ intensity: 0.8 }),
+        gridGlow({ color: "cyan", spacing: 50 }),
+        cursorMagnet({ strength: 0.7 })
+      ]
+    });
+  </script>
+
+</body>
+
+</html>
