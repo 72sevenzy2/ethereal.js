@@ -25,16 +25,17 @@
 
   <script type="module">
     import { ethereal } from "../dist/main.js";
-    import { wave } from "../dist/effects/waves.js";
+    import { wave } from "../dist/effects/sineWaves.js";
     import { gridGlow } from "../dist/effects/grids.js";
     import { cursorMagnet } from "../dist/effects/cursor.js";
+    import { hideCursor } from "../dist/effects/hideCursor.js";
 
     ethereal({
       element: "#canvas",
       effects: [
-        wave({ intensity: 0.8 }),
-        gridGlow({ color: "cyan", spacing: 50 }),
-        cursorMagnet({ strength: 0.7 })
+        wave({ intensity: 10, curvature: 1, waveLength: 1 }),
+        hideCursor({ element: "#canvas", color: "white" }),
+        gridGlow({ color: "dark-gray", spacing: 20 })
       ]
     });
   </script>

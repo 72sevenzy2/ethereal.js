@@ -1,9 +1,6 @@
 export class Engine {
-    canvas;
-    ctx;
-    effects = [];
-    state;
     constructor(canvas) {
+        this.effects = [];
         console.log("loaded engine");
         this.canvas = canvas;
         this.ctx = canvas.getContext("2d");

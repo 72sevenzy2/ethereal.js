@@ -1,4 +1,3 @@
-import {} from "../core/engine.js";
 export function gridGlow({ color = "gray", spacing = 10 } = {}) {
     return {
         update(ctx, state) {
