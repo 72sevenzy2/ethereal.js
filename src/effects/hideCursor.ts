@@ -1,5 +1,17 @@
 import { type Effect, type EngineState } from "../core/engine";
 
+/**
+ * @param options - Configuration for the hideCursor effect.
+ * 
+ * @param options.strength - The strength of the cursor. (smoothness)
+ * 
+ * @param options.element - Selector for the element you want your mouse to overlay from.
+ * 
+ * @param options.color - The color of the mouse. (any color of your choice)
+ * 
+ * @returns Effect - An object that contains the 'update' method for the engine
+ */
+
 export function hideCursor({ strength = 0.5, element, color }: {
     element: string, strength?: number,
     color: string

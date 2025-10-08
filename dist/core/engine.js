@@ -1,3 +1,4 @@
+// the background engine with all necessary utilities.
 export class Engine {
     constructor(canvas) {
         this.effects = [];

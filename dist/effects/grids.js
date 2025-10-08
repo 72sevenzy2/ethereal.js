@@ -1,3 +1,12 @@
+/**
+ * @param options - Configurations for the gridGlow effect.
+ *
+ * @param options.color - Color of the grid squares. (any color of your choice).
+ *
+ * @param options.spacing - Amount of grids that should display. (lower number for more grids).
+ *
+ * @returns Effect - An object with a 'update' method for the engine.
+ */
 export function gridGlow({ color = "gray", spacing = 10 } = {}) {
     return {
         update(ctx, state) {

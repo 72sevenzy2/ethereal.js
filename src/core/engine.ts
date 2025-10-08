@@ -1,3 +1,5 @@
+// the background engine with all necessary utilities.
+
 export interface EngineState {
     mouseX: number;
     mouseY: number;
