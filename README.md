@@ -44,7 +44,7 @@ Create an HTML file and initialize the engine with one or more effects.
 </script>
 
 
-🪄 API Reference
+ API Reference
 ethereal({ element, effects })
 
 The main function that initializes the rendering engine.
