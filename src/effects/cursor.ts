@@ -3,7 +3,7 @@ import { type EngineState, type Effect } from "../core/engine";
 /**
  *  @param options - Configuration for the cursor element.
  * 
- * @param options.strength - The strength of the cursor (smoothness).
+ * @param options.strength - The strength of the cursor (size).
  * 
  * @param options.color - The color of the element laying below ur mouse. (any color of your choice).
  * 

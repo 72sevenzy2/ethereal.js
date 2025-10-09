@@ -10,7 +10,9 @@ import { type EngineState, type Effect } from "../core/engine";
  * @returns Effect - An object with a 'update' method for the engine.
  */
 
-export function gridGlow({ color = "gray", spacing = 10 } = {}): Effect {
+export function gridGlow({ color = "gray", spacing = 20 }: {
+    color: string, spacing: number
+}): Effect {
     return {
         update(ctx, state: EngineState) {
             ctx.strokeStyle = color;

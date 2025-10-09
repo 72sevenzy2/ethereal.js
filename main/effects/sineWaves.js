@@ -11,7 +11,7 @@
  *
  * @returns Effect - An object with an 'update' method for the engine.
  */
-export function wave({ intensity = 1, curvature = 20, waveLength = 0.03 } = {}) {
+export function wave({ intensity = 1, curvature = 20, waveLength = 0.03, color = "gray" } = {}) {
     // Clamp the waveLength to a max of 0.1 and min of 0.01
     const lengthValue = Math.min(Math.max(waveLength, 0.01), 0.1);
     return {
@@ -22,7 +22,7 @@ export function wave({ intensity = 1, curvature = 20, waveLength = 0.03 } = {}) 
                 const y = state.height / 2 + Math.sin((x + state.time * 100) * lengthValue) * amplitude;
                 ctx.lineTo(x, y);
             }
-            ctx.strokeStyle = "gray";
+            ctx.strokeStyle = color;
             ctx.stroke();
         }
     };

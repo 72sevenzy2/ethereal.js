@@ -24,18 +24,20 @@
   <canvas id="canvas"></canvas>
 
   <script type="module">
-    import { ethereal } from "../dist/main.js";
-    import { wave } from "../dist/effects/sineWaves.js";
-    import { gridGlow } from "../dist/effects/grids.js";
-    import { cursorMagnet } from "../dist/effects/cursor.js";
-    import { hideCursor } from "../dist/effects/hideCursor.js";
+    import { ethereal } from "../main/main.js";
+    import { wave } from "../main/effects/sineWaves.js";
+    import { gridGlow } from "../main/effects/grids.js";
+    import { cursorMagnet } from "../main/effects/cursor.js";
+    import { hideCursor } from "../main/effects/hideCursor.js";
+    import { cursorParticles } from "../main/effects/cursorParticles.js";
+    import { gridHover } from "../main/effects/gridHover.js"
 
     ethereal({
       element: "#canvas",
       effects: [
-        wave({ intensity: 10, curvature: 1, waveLength: 1 }),
-        hideCursor({ element: "#canvas", color: "white" }),
-        gridGlow({ color: "dark-gray", spacing: 20 })
+        wave({waveLength: 10, intensity: 3, curvature: 100}),
+        hideCursor({ element: "#canvas", color: "white", strength: 0.5 }),
+        gridHover({ spacing: 10, growSpeed: 10, growAmount: 3, color: "green" })
       ]
     });
   </script>

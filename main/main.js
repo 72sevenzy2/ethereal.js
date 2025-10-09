@@ -1,4 +1,4 @@
-import { Engine } from "./core/engine";
+import { Engine } from "./core/engine.js";
 export function ethereal({ element, effects }) {
     const canvas = document.querySelector(element);
     if (!canvas)

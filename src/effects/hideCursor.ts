@@ -3,7 +3,7 @@ import { type Effect, type EngineState } from "../core/engine";
 /**
  * @param options - Configuration for the hideCursor effect.
  * 
- * @param options.strength - The strength of the cursor. (smoothness)
+ * @param options.strength - The strength of the cursor. (size)
  * 
  * @param options.element - Selector for the element you want your mouse to overlay from.
  * 
@@ -29,7 +29,7 @@ export function hideCursor({ strength = 0.5, element, color }: {
             }
 
             ctx.beginPath();
-            ctx.arc(state.mouseX, state.mouseY, 30 * strength || 0.5, 0, Math.PI * 2);
+            ctx.arc(state.mouseX, state.mouseY, 20 * strength || 0.5, 0, Math.PI * 2);
             ctx.fillStyle = color;
             ctx.fill();
             ctx.closePath();

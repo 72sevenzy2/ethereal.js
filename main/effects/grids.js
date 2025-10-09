@@ -7,7 +7,7 @@
  *
  * @returns Effect - An object with a 'update' method for the engine.
  */
-export function gridGlow({ color = "gray", spacing = 10 } = {}) {
+export function gridGlow({ color = "gray", spacing = 20 }) {
     return {
         update(ctx, state) {
             ctx.strokeStyle = color;

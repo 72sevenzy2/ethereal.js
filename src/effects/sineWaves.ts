@@ -14,10 +14,8 @@ import { type EngineState, type Effect } from "../core/engine";
  * @returns Effect - An object with an 'update' method for the engine.
  */
 
-export function wave({ intensity = 1, curvature = 20, waveLength = 0.03 }: {
-    intensity?: number,
-    curvature?: number,
-    waveLength?: number
+export function wave({ intensity = 1, curvature = 20, waveLength = 0.03, color = "gray" }: {
+    intensity?: number, curvature?: number, waveLength?: number, color?: string
 } = {}): Effect {
 
     // Clamp the waveLength to a max of 0.1 and min of 0.01
@@ -33,7 +31,7 @@ export function wave({ intensity = 1, curvature = 20, waveLength = 0.03 }: {
                 ctx.lineTo(x, y);
             }
 
-            ctx.strokeStyle = "gray";
+            ctx.strokeStyle = color;
             ctx.stroke();
         }
     };
