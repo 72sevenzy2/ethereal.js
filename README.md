@@ -44,7 +44,7 @@ Create an HTML file and initialize the engine with one or more effects.
 </script>
 
 
-🪄 API Reference
+ API Reference
 ethereal({ element, effects })
 
 The main function that initializes the rendering engine.
@@ -54,7 +54,7 @@ The main function that initializes the rendering engine.
 | `effects` | `Effect[]` | Array of imported effects to render each frame. |
 
 
- Built-in Effects
+ These are some built in effects (with examples included):
  wave({ intensity, curvature, waveLength })
 
 Draws a dynamic sine-wave animation across the canvas.
