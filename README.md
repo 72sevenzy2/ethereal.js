@@ -119,4 +119,4 @@ interface EngineState {
 Effects receive this state every frame and render accordingly.
 
 
- License - MIT © 2025 — Created with ✨ by Seventy
+ License - MIT © 2025 — Created with 72
