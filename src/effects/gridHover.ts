@@ -17,11 +17,11 @@ import { type EngineState, type Effect } from "../core/engine";
  */
 
 export function gridHover({ spacing = 20, fadeSpeed = 0.05, alpha = 0.8, growSpeed = 1.5, growAmount = 1.3 }:
-    { spacing?: number, fadeSpeed?: number, alpha?: number, growSpeed?: number, growAmount?: number }
+    { spacing?: number, fadeSpeed?: number, alpha?: number, growSpeed?: number, growAmount?: number } = {}
 ): Effect {
     const highlights = new Map<string, { alpha: number; scale: number }>();
     return {
-        update(ctx, state: EngineState) {   
+        update(ctx, state: EngineState) {
             ctx.save();
             ctx.strokeStyle = "rgba(200, 200, 200, 0.2)";
             ctx.lineWidth = 1;

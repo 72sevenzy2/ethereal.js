@@ -30,14 +30,16 @@
     import { cursorMagnet } from "../main/effects/cursor.js";
     import { hideCursor } from "../main/effects/hideCursor.js";
     import { cursorParticles } from "../main/effects/cursorParticles.js";
-    import { gridHover } from "../main/effects/gridHover.js"
+    import { gridHover } from "../main/effects/gridHover.js";
+    import { Particles } from "../main/effects/particle.js";
 
     ethereal({
       element: "#canvas",
       effects: [
-        wave({waveLength: 10, intensity: 3, curvature: 100}),
-        hideCursor({ element: "#canvas", color: "white", strength: 0.5 }),
-        gridHover({ spacing: 10, growSpeed: 10, growAmount: 3, color: "green" })
+        hideCursor({ element: "#canvas", color: "white", strength: 0.4 }),
+        new Particles(),
+        cursorParticles({speed: 1, amount: 20}),
+        gridHover({ spacing: 10, growSpeed: 20, growAmount: 1, color: "green", fadeSpeed: 0.01 })
       ]
     });
   </script>

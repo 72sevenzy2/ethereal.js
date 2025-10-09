@@ -13,7 +13,7 @@
  *
  * @returns Effect - An object which contains an 'update' method for the engine.
  */
-export function gridHover({ spacing = 20, fadeSpeed = 0.05, alpha = 0.8, growSpeed = 1.5, growAmount = 1.3 }) {
+export function gridHover({ spacing = 20, fadeSpeed = 0.05, alpha = 0.8, growSpeed = 1.5, growAmount = 1.3 } = {}) {
     const highlights = new Map();
     return {
         update(ctx, state) {

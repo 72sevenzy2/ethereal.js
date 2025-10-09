@@ -11,8 +11,6 @@ import { type EngineState, type Effect } from "../core/engine";
  * 
  * @param options.speed - The speed of the particles going around the cursor.
  * 
- * @param options.color - The color of the particles.
- * 
  * @param options.trailLength - The length of the trail (of each particle).
  * 
  * @param options.counterClockwise - Whether the particles should move clockwise or counterclockwise.
@@ -22,9 +20,9 @@ import { type EngineState, type Effect } from "../core/engine";
 
 export function cursorParticles({ amount = 10, minRadius = 20, maxRadius = 40, speed = 30,
     color = "white", trailLength = 10, counterClockwise = false }: {
-        amount: number, minRadius: number, maxRadius: number,
-        speed: number, color: string, trailLength: number, counterClockwise: boolean
-    }): Effect {
+        amount?: number, minRadius?: number, maxRadius?: number,
+        speed?: number, color?: string, trailLength?: number, counterClockwise?: boolean
+    } = {}): Effect {
     const particles = Array.from({ length: amount }, () => ({
         angle: Math.random() * Math.PI * 2,
         radius: Math.random() * (maxRadius - minRadius) + minRadius,
