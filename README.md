@@ -3,7 +3,7 @@
 Ethereal.js is a lightweight, modular background engine for creating dynamic and interactive effects.  
 It’s designed for simplicity, flexibility, and creativity — perfect for adding ambient to landing pages, and creative projects.
 
-( Please note I will be actively maintaining this framework and constantly adding new effects )
+( Please note I will be actively maintaining this library and constantly adding new effects )
 ---
 
 ## Installation
@@ -119,4 +119,4 @@ interface EngineState {
 Effects receive this state every frame and render accordingly.
 
 
- License - MIT © 2025 — Created with ✨ by Seventy
+ License - MIT © 2025 — Created with 72
