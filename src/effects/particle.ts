@@ -7,6 +7,8 @@ import { type EngineState, type Effect } from "../core/engine";
  * 
  * @param options.radius - The size of the particles.
  * 
+ * @param options.zlife - The amount of time the particles will last.
+ * 
  * @param options.speed - The speed of the particles.
  * 
  * @returns Effect - An object with an 'update' method for the engine.
