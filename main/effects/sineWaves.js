@@ -18,6 +18,9 @@ export function wave({ intensity = 1, curvature = 20, waveLength = 0.03, color =
         update(ctx, state) {
             ctx.beginPath();
             const amplitude = 20 * intensity;
+            if (curvature > 40) {
+                curvature += 10;
+            }
             for (let x = 0; x < state.width; x += curvature) {
                 const y = state.height / 2 + Math.sin((x + state.time * 100) * lengthValue) * amplitude;
                 ctx.lineTo(x, y);
