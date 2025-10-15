@@ -28,7 +28,7 @@ export function cursorParticles({ amount = 10, minRadius = 20, maxRadius = 40, s
         radius: Math.random() * (maxRadius - minRadius) + minRadius,
         size: Math.random() * 3 + 1,
         positions: [] as { x: number, y: number }[]
-    }));
+    })); 
     return {
         update(ctx, state: EngineState) {
             ctx.save();
