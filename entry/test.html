@@ -37,9 +37,11 @@
       element: "#canvas",
       effects: [
         hideCursor({ element: "#canvas", color: "white", strength: 0.4 }),
-        new Particles(),
-        cursorParticles({speed: 1, amount: 20}),
-        gridHover({ spacing: 10, growSpeed: 20, growAmount: 1, color: "green", fadeSpeed: 0.01 })
+        new Particles({amount: 1000}),
+        hideCursor({}),
+        cursorParticles({speed: 10, amount: 100, minRadius: 10, maxRadius: 20}),
+        gridHover({ spacing: 20, growSpeed: 20, growAmount: 10, fadeSpeed: 0.02 }),
+        wave({ waveLength: 0.05,  intensity: 15, curvature: 40})
       ]
     });
   </script>
