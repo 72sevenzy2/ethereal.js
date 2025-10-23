@@ -1,8 +1,9 @@
 {
   "name": "ethereal.js",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "background-engine library",
   "main": "./main/main.js",
+  "keywords": ["engine", "background", "tools", "web", "library", "simulation", "visuals"],
   "scripts": {
     "build": "tsc"
   },
