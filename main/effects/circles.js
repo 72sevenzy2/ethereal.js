@@ -1,31 +1,24 @@
 import { resolveCollisions } from "./utils/2dcollisions.js";
 export class circle {
-    constructor({ amount = 10, radius = 50, velocityX = 10, velocityY = 10, mass = 100, positionBound = [10, 50] } = {}) {
+    constructor({ amount = 10, radius = 50, velocityX = 10, velocityY = 10, mass = 100, positionBound = [0, 0] } = {}) {
         this.circles = [];
         this.radius = radius;
         this.positionBound = positionBound;
-        // this.positionX = Math.floor(Math.random() * 100) + 1;
-        // this.positionY = Math.floor(Math.random() * 100) + 1;
         this.velocityX = velocityX;
         this.amount = amount;
         this.velocityY = velocityY;
         this.mass = mass;
+    }
+    update(ctx, state) {
         let circleObj;
-        for (let i = 0; i < this.amount; i++) {
-            if (this.amount === 1) {
-                circleObj = {
-                    positionX: this.positionBound[0],
-                    positionY: this.positionBound[1],
-                    velocityX: this.velocityX,
-                    velocityY: this.velocityY,
-                    radius: this.radius,
-                    mass: this.mass
-                };
-                this.circles.push(circleObj);
-            }
-            else {
-                const posX = Math.floor(Math.random() * (this.positionBound[0])) + 1;
-                const posY = Math.floor(Math.random() * (this.positionBound[1])) + 1;
+        if (this.circles.length === 0) {
+            for (let i = 0; i < this.amount; i++) {
+                const minX = this.positionBound[0];
+                const maxX = this.positionBound[1];
+                const minY = this.positionBound[2] ?? 0;
+                const maxY = this.positionBound[3] ?? 100;
+                const posX = Math.floor(Math.random() * (maxX - minX)) + minX;
+                const posY = Math.floor(Math.random() * (maxY - minY)) + minY;
                 circleObj = {
                     positionX: posX,
                     positionY: posY,
@@ -37,8 +30,6 @@ export class circle {
                 this.circles.push(circleObj);
             }
         }
-    }
-    update(ctx, state) {
         // bounce of the walls
         for (const c of this.circles) {
             if (c.positionX + this.radius > state.width) {
@@ -77,7 +68,7 @@ export class circle {
             // drawing
             ctx.beginPath();
             ctx.arc(c.positionX, c.positionY, this.radius, 0, Math.PI * 2, false);
-            ctx.fillStyle = "red";
+            ctx.fillStyle = "white";
             ctx.fill();
             ctx.closePath();
         }
