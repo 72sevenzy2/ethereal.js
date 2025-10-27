@@ -32,16 +32,15 @@
     import { cursorParticles } from "../main/effects/cursorParticles.js";
     import { gridHover } from "../main/effects/gridHover.js";
     import { Particles } from "../main/effects/particle.js";
+    import { circle } from "../main/effects/circles.js";
 
     ethereal({
       element: "#canvas",
       effects: [
+        new circle({ amount: 10 }),
         hideCursor({ element: "#canvas", color: "white", strength: 0.4 }),
-        new Particles({amount: 1000}),
-        hideCursor({}),
-        cursorParticles({speed: 10, amount: 100, minRadius: 10, maxRadius: 20}),
         gridHover({ spacing: 20, growSpeed: 20, growAmount: 10, fadeSpeed: 0.02 }),
-        wave({ waveLength: 0.05,  intensity: 15, curvature: 40})
+        wave({ waveLength: 0.05, intensity: 15, curvature: 40 })
       ]
     });
   </script>
