@@ -1,4 +1,9 @@
 import { Engine } from "./core/engine.js";
+/**
+ * @param - Hello user, just wanted to make sure aware of the following:
+ *
+ * @param The (effect) effect and the (particle) effect will overlap eacheother, so please make sure to choose ONE.
+ */
 export function ethereal({ element, effects }) {
     const canvas = document.querySelector(element);
     if (!canvas)
