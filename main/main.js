@@ -1,8 +1,8 @@
-import { Engine } from "./core/engine.js";
+import { Engine } from "./core/engine";
 /**
  * @param - Hello user, just wanted to make sure aware of the following:
  *
- * @param The (effect) effect and the (particle) effect will overlap eacheother, so please make sure to choose ONE.
+ * @param The (circles) effect and the (particle) effect will overlap eacheother, so please make sure to choose ONE.
  */
 export function ethereal({ element, effects }) {
     const canvas = document.querySelector(element);
